@@ -1,0 +1,16 @@
+@import url('./variables.css');
+@import url('./reset.css');
+@import url('./layout.css');
+@import url('./components/header.css');
+@import url('./components/buttons.css');
+@import url('./components/cards.css');
+@import url('./components/sidebar.css');
+@import url('./components/dropzone.css');
+@import url('./components/file-list.css');
+@import url('./components/progress.css');
+@import url('./components/notifications.css');
+@import url('./components/modal.css');
+@import url('./pages/inicio.css');
+@import url('./pages/convertidor.css');
+@import url('./pages/acerca.css');
+@import url('./pages/ayuda.css');

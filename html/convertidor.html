@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WMA Converter | Convertidor</title>
+    <link rel="stylesheet" href="../css/global.css" />
+  </head>
+  <body data-page="convertidor">
+    <header class="site-header">
+      <div class="brand-wrap">
+        <div class="brand-mark">W</div>
+        <div>
+          <div class="brand-name">WMA Converter</div>
+          <small>Motor FFmpeg listo</small>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="inicio.html">Inicio</a>
+        <a href="convertidor.html" class="is-active">Convertidor</a>
+        <a href="acerca.html">Acerca de</a>
+        <a href="ayuda.html">Ayuda</a>
+      </nav>
+      <div class="header-status">
+        <span class="status-dot"></span>
+        <span id="ffmpeg-status">Preparando motor…</span>
+      </div>
+    </header>
+
+    <main class="page-shell converter-layout">
+      <section class="main-column">
+        <div class="hero-card compact">
+          <div>
+            <span class="eyebrow">Conversión local</span>
+            <h1>Convierte tu música a MP3.</h1>
+            <p>Importa tus archivos WMA y transforma varias canciones con rapidez y precisión.</p>
+          </div>
+        </div>
+
+        <div class="panel dropzone-panel">
+          <div id="dropzone" class="dropzone" tabindex="0">
+            <div class="dropzone-icon">♫</div>
+            <h2>Arrastra y suelta tus archivos WMA</h2>
+            <p>o selecciona desde tu equipo</p>
+            <div class="dropzone-actions">
+              <button id="select-files-btn" class="primary-btn" type="button">Seleccionar archivos</button>
+              <button id="select-folder-btn" class="secondary-btn" type="button">Seleccionar carpeta</button>
+            </div>
+            <input id="file-input" type="file" accept=".wma,audio/x-ms-wma,audio/wma" multiple webkitdirectory directory hidden />
+            <small>Formatos admitidos: WMA → MP3 • 128/192/256/320 kbps</small>
+          </div>
+        </div>
+
+        <div class="panel queue-panel">
+          <div class="panel-header">
+            <h3>Cola de archivos</h3>
+            <button id="clear-queue-btn" class="ghost-btn" type="button">Limpiar lista</button>
+          </div>
+          <div id="file-list" class="file-list" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <aside class="sidebar-column">
+        <section class="panel config-panel">
+          <div class="panel-header">
+            <h3>Configuración</h3>
+          </div>
+
+          <label class="field">
+            <span>Calidad MP3</span>
+            <select id="quality-select">
+              <option value="128">128 kbps</option>
+              <option value="192" selected>192 kbps</option>
+              <option value="256">256 kbps</option>
+              <option value="320">320 kbps</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Frecuencia de muestreo</span>
+            <select id="sample-rate-select">
+              <option value="auto" selected>Automática</option>
+              <option value="44100">44100 Hz</option>
+              <option value="48000">48000 Hz</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Nombre de salida</span>
+            <input id="output-name" type="text" placeholder="Ej: mix-1" />
+          </label>
+
+          <label class="checkbox-row">
+            <input id="preserve-name" type="checkbox" checked />
+            <span>Conservar nombre original</span>
+          </label>
+        </section>
+
+        <section class="panel processing-panel">
+          <div class="panel-header">
+            <h3>Procesamiento</h3>
+          </div>
+
+          <div class="action-row">
+            <button id="convert-all-btn" class="primary-btn" type="button">Convertir todo</button>
+            <button id="pause-btn" class="secondary-btn" type="button">Pausar</button>
+          </div>
+          <div class="action-row compact-row">
+            <button id="cancel-btn" class="ghost-btn" type="button">Cancelar</button>
+          </div>
+
+          <div class="progress-block">
+            <div class="progress-header">
+              <span>Progreso general</span>
+              <span id="overall-progress-value">0%</span>
+            </div>
+            <div class="progress-rail">
+              <div id="overall-progress-bar" class="progress-fill"></div>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span>Completados</span>
+              <strong id="completed-count">0</strong>
+            </div>
+            <div class="stat-card">
+              <span>Pendientes</span>
+              <strong id="pending-count">0</strong>
+            </div>
+            <div class="stat-card">
+              <span>Errores</span>
+              <strong id="error-count">0</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel results-panel">
+          <div class="panel-header">
+            <h3>Resultados</h3>
+            <button id="download-all-btn" class="secondary-btn" type="button">ZIP</button>
+          </div>
+          <div id="result-list" class="result-list"></div>
+          <div class="results-actions">
+            <button id="clear-results-btn" class="ghost-btn" type="button">Limpiar resultados</button>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <script type="module" src="../js/app.js"></script>
+  </body>
+</html>

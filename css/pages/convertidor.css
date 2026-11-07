@@ -1,0 +1,96 @@
+.panel {
+  padding: 1.1rem 1.2rem;
+  border-radius: var(--radius);
+  background: rgba(13, 17, 23, 0.85);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.field span {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text-primary);
+  padding: 0.75rem 0.85rem;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+
+.action-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.compact-row {
+  margin-top: -0.2rem;
+}
+
+.progress-block {
+  margin-top: 1.1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.stat-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem 0.7rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.stat-card span {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 1.5rem;
+}
+
+.results-actions {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: flex-end;
+}

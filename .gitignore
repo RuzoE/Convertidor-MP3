@@ -1,0 +1,6 @@
+node_modules/
+Thumbs.db
+.DS_Store
+vendor/ffmpeg/ffmpeg-core.js
+vendor/ffmpeg/ffmpeg-core.wasm
+vendor/ffmpeg/ffmpeg-core.worker.js

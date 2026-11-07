@@ -1,0 +1,44 @@
+.primary-btn,
+.secondary-btn,
+.ghost-btn,
+.icon-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), opacity var(--transition);
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #06150f;
+  box-shadow: 0 10px 20px rgba(55, 211, 154, 0.2);
+  font-weight: 700;
+}
+
+.secondary-btn {
+  background: rgba(19, 49, 40, 0.8);
+  border-color: rgba(96, 240, 187, 0.25);
+  color: var(--text-primary);
+}
+
+.ghost-btn {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.ghost-btn:hover,
+.icon-btn:hover {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

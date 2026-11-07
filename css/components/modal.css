@@ -1,0 +1,32 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 8, 12, 0.62);
+  display: none;
+  place-items: center;
+  z-index: 99;
+}
+
+.modal-backdrop.is-open {
+  display: grid;
+}
+
+.modal {
+  width: min(420px, calc(100vw - 2rem));
+  background: rgba(17, 23, 31, 0.96);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 1.3rem;
+}
+
+.modal h3 {
+  margin-top: 0;
+}
+
+.modal-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.7rem;
+}

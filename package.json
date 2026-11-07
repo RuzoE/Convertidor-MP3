@@ -1,0 +1,16 @@
+{
+  "name": "wma-converter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Aplicación web para convertir archivos WMA a MP3 localmente con FFmpeg.wasm.",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -c-1",
+    "dev": "npx http-server . -p 8080 -c-1"
+  },
+  "dependencies": {
+    "@ffmpeg/ffmpeg": "0.12.10",
+    "@ffmpeg/util": "0.12.1",
+    "jszip": "3.10.1"
+  }
+}
